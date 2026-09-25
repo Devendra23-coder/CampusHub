@@ -72,4 +72,10 @@ export const attendance = {
   getEventAttendance: (eventId) => api.get(`/attendance/event/${eventId}`),
 };
 
+export const notifications = {
+  getNotifications: () => api.get('/notifications'),
+  markAsRead: (id) => api.put(`/notifications/${id}/read`),
+  markAllRead: () => api.put('/notifications/read-all'),
+};
+
 export default api;

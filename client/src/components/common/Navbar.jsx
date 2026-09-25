@@ -16,6 +16,7 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Dashboard', path: '/dashboard' },
     { name: 'Events', path: '/events' },
+    { name: 'My Events', path: '/my-events' },
     { name: 'Clubs', path: '/clubs' },
     { name: 'Announcements', path: '/announcements' },
   ];

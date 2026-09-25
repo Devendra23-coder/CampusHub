@@ -1,19 +1,23 @@
 -- CampusHub Seed Data
--- Run AFTER schema.sql
--- Admin password: admin123 (bcrypt hash)
--- Student password: student123 (bcrypt hash)
+-- Run AFTER schema.sql:  mysql -u root -p campushub < seed.sql
+--
+-- Login credentials:
+--   Admin:   admin@campushub.com / admin123
+--   Student: rahul@student.com   / student123
+--   Student: priya@student.com   / student123
+--   Student: amit@student.com    / student123
 
 USE campushub;
 
 -- Insert admin user (password: admin123)
 INSERT INTO users (name, email, password, role, phone, department) VALUES
-('Admin User', 'admin@campushub.com', '$2b$10$8KzaNdKIMyOkASCimq/m3.QPbHOJPBCEHPjLYOoiHiKlyKNrqEWbS', 'admin', '9876543210', 'Administration');
+('Admin User', 'admin@campushub.com', '$2b$10$MZyv9pNixTvLmNZTS9jfN.l7M1LMTNKvp34mrOTCVLR0LFDBR2wue', 'admin', '9876543210', 'Administration');
 
 -- Insert sample students (password: student123)
 INSERT INTO users (name, email, password, role, phone, department, year) VALUES
-('Rahul Sharma', 'rahul@student.com', '$2b$10$YQ8GJhz4OqRz1DQFK9yzn.YjA6FqR2VZBJ6b7xn0dGmTz3q3hJdK6', 'student', '9876543211', 'Computer Science', '3rd Year'),
-('Priya Patel', 'priya@student.com', '$2b$10$YQ8GJhz4OqRz1DQFK9yzn.YjA6FqR2VZBJ6b7xn0dGmTz3q3hJdK6', 'student', '9876543212', 'Electronics', '2nd Year'),
-('Amit Kumar', 'amit@student.com', '$2b$10$YQ8GJhz4OqRz1DQFK9yzn.YjA6FqR2VZBJ6b7xn0dGmTz3q3hJdK6', 'student', '9876543213', 'Mechanical', '4th Year');
+('Rahul Sharma', 'rahul@student.com', '$2b$10$Us0e/oiblKKmnNBY/WrV0uHka7eVVtU1EgZ1IeIRmyf31mUdIkqPq', 'student', '9876543211', 'Computer Science', '3rd Year'),
+('Priya Patel', 'priya@student.com', '$2b$10$Us0e/oiblKKmnNBY/WrV0uHka7eVVtU1EgZ1IeIRmyf31mUdIkqPq', 'student', '9876543212', 'Electronics', '2nd Year'),
+('Amit Kumar', 'amit@student.com', '$2b$10$Us0e/oiblKKmnNBY/WrV0uHka7eVVtU1EgZ1IeIRmyf31mUdIkqPq', 'student', '9876543213', 'Mechanical', '4th Year');
 
 -- Insert sample events
 INSERT INTO events (title, description, location, event_date, end_date, category, max_participants, created_by, status) VALUES
